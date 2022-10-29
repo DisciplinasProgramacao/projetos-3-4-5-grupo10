@@ -6,6 +6,11 @@ public class Rota {
     private Date date;
     private int distance;
 
+    public Rota(Date date, int distance) {
+        this.date = date;
+        this.distance = distance;
+    }
+
     public Date getDate() {
         return date;
     }
