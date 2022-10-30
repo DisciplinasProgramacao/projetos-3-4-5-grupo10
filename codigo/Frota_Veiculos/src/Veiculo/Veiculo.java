@@ -3,10 +3,11 @@ package Veiculo;
 import Rota.Rota;
 
 import java.io.Serializable;
-import java.util.Date;
 import java.util.LinkedList;
 
-public abstract class Veiculo implements Serializable{
+public abstract class Veiculo implements Serializable {
+
+    protected static long serialVersionUID = 1L;
     protected String identifier;
     protected int tankSize;
     protected double kilometerPerLiter;
@@ -18,5 +19,6 @@ public abstract class Veiculo implements Serializable{
     public abstract double calcMaintenanceCost();
     public abstract double calcInspectionCost();
     public abstract double calcVehicleInsuranceCost();
-    public abstract void addRoutes(Date date, int distance);
+    public abstract void addRoutes(String date, int distance);
+    public abstract void generateReport();
 }
